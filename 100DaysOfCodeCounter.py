@@ -31,7 +31,7 @@ else:
         start_date = datetime.datetime.strptime(userinput, "%Y-%m-%d").date()
     print("You have chosen ", start_date)
 
-    print("Saving to startdate.data")
+    print("Saving to ./startdate.data")
     with p.open('w') as f:
         f.write(start_date.strftime("%Y-%m-%d"))
 
