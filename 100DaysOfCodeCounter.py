@@ -3,15 +3,6 @@
 from pathlib import Path
 import datetime
 
-# check for a special file
-# if yes
-#   read it: start_date
-# else
-#   ask user for start date
-#   write start date to file
-# calculate number of days since start date
-# print
-
 print("100 Days of Code Counter")
 
 datapath = './startdate.data'
@@ -31,7 +22,7 @@ else:
         start_date = datetime.datetime.strptime(userinput, "%Y-%m-%d").date()
     print("You have chosen ", start_date)
 
-    print("Saving to ./startdate.data")
+    print("Saving to ", p.absolute().__str__())
     with p.open('w') as f:
         f.write(start_date.strftime("%Y-%m-%d"))
 
